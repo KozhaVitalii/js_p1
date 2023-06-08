@@ -1,0 +1,269 @@
+/* =============== Базове оформлення (загальне для всіх) =============== */
+
+:root {
+  --color-black: #111111;
+  --color-dark: #202024;
+  --color-gray: rgba(17, 17, 17, 0.6);
+  --color-light-gray: #b4afaf;
+  --color-body: #f6f6f6;
+  --color-violet: #4f2ee8;
+  --color-orange: #eac645;
+  --color-white: #ffffff;
+
+  --transition-rule: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-modal-window: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 375px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--color-black);
+  background-color: var(--color-body);
+  
+  overflow-x: auto;
+  overflow-y: scroll;
+  cursor: default;
+}
+
+body.theme-dark {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-dark);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  color: #000000;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =============== Базові розміри контейнерів (загальні для всіх) =============== */
+
+.container {
+  width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 24px;
+  }
+}
+
+/* =============== Розмітка головної сторінки (Mobile/Tablet/Desktop) =============== */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-content {
+  height: 64px;
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    height: 72px;
+  }
+}
+
+.categories-support-books-wrapper {
+  padding-top: 104px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .categories-support-books-wrapper {
+    padding-top: 112px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .categories-support-books-wrapper {
+    display: flex;
+    gap: 0 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .categories-support-wrapper {
+    display: flex;
+    gap: 0 32px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .categories-support-wrapper {
+    flex-direction: column;
+    gap: 86px 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.categories-list {
+  margin-bottom: 40px;
+  height: 228px;
+}
+
+@media (min-width: 768px) {
+  .categories-list {
+    margin: 0;
+    width: 337px;
+    height: 472px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .categories-list {
+    width: 356px;
+    height: 472px;
+  }
+}
+
+.support-ukraine {
+  margin-bottom: 40px;
+  height: 352px;
+}
+
+@media (min-width: 768px) {
+  .support-ukraine {
+    margin: 0;
+    width: 335px;
+    height: 472px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .support-ukraine {
+    width: 356px;
+    height: 490px;
+  }
+}
+
+.support-shopping-wrapper {
+  padding-top: 64px;
+}
+
+@media (min-width: 768px) {
+  .support-shopping-wrapper {
+    padding-top: 72px;
+  }
+}
+
+@media (min-width: 768px) {
+  .support-shopping-wrapper {
+    display: flex;
+    gap: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .support-shopping-wrapper {
+    padding-top: 0;
+  }
+}
+
+.support-wrapper {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .support-wrapper {
+    display: block;
+    padding-top: 112px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .shopping-wrapper {
+    padding-top: 72px;
+    width: 996px;
+  }
+}
+
+.spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-wrapper.hidden {
+  display: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 5px solid #a0a0a0;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: 750ms linear infinite spinner-animation;
+}
+
+@keyframes spinner-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}

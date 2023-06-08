@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <include src="./partials/head.html"></include>
+  <body data-active-page="shopping">
+    <include src="./partials/header.html"></include>
+
+    <main>
+      <div class="container">
+        <div class="spinner-wrapper hidden">
+          <div class="spinner"></div>
+        </div>
+        <div class="support-shopping-wrapper">
+          <div class="support-wrapper">
+            <include src="./partials/support-ukraine.html"></include>
+          </div>
+          <div class="shopping-wrapper">
+            <include src="./partials/shopping-list.html"></include>
+            <div class="spinner-wrapper hidden">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/support-ukraine2.js" type="module"></script>
+    <script src="./js/shopping-list.js" type="module"></script>
+    <script src="./js/header.js" type="module"></script>
+    <script src="./js/mobile-menu-2.js" type="module"></script>
+  </body>
+</html>
