@@ -1,27 +1,42 @@
 {
-  "name": "parcel-project-template",
-  "version": "2.0.0",
+  "name": "js_p1",
+  "version": "1.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://KozhaVitalii.github.io/js_p1",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /js_p1/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/KozhaVitalii/js_p1.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Vitaliy Kozha <kozhavitaliy@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/KozhaVitalii/js_p1/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "buffer": "^6.0.3",
+    "firebase": "^9.21.0",
+    "joi": "^17.9.2",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6",
+    "overlayscrollbars": "^2.1.1",
+    "perfect-scrollbar": "^1.5.5",
+    "scroll-lock": "^2.1.5",
+    "swiper": "^9.2.4"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.0",
+    "@parcel/packager-xml": "^2.6.0",
     "@parcel/transformer-sass": "^2.6.0",
+    "@parcel/transformer-webmanifest": "^2.6.0",
+    "@parcel/transformer-xml": "^2.6.0",
+    "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
